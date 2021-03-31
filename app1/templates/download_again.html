@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+    <style>
+        body {background-color: powderblue;text-align: center;}
+        h3 {color: blue;}
+        h4{color:darkcyan;}
+    </style>  
+    <meta charset="UTF-8">  
+    <title>Upload File</title>
+     
+</head>  
+<body> 
+<form method="GET" class="post-form">
+    {% csrf_token %}
+    <h3>{{ output }}</h3>
+    <h4>Click below for manual download portal</h4> 
+    <form method="GET" action="download" >
+        <button>Download File Form</button>
+    </form>
+
+</body>  
+</html> 

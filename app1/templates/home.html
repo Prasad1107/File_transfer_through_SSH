@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+    <style>
+
+        body {background-color: powderblue;text-align: center;}
+        h3   {color: blue; text-align: center;}
+        button {color: darkblue;}
+
+    </style>
+    <meta charset="UTF-8">  
+    <title>Welcome to File Manager</title>   
+</head>  
+<body>
+    <h3> Click below for manual upload portal</h3>  
+    <form method="GET" action="upload" >
+        {% csrf_token %}
+        <button>Upload File Form</button>
+    </form>
+
+    <h3>Click below for manual download portal</h3> 
+    <form method="GET" action="download" >
+        {% csrf_token %}
+        <button>Download File Form</button>
+    </form>
+
+    <h3>Click below for file list</h3> 
+    <form method="GET" action="files" >
+        {% csrf_token %}
+        <button>File List</button>
+    </form>
+
+    <h3>Click below for API</h3> 
+    <form method="GET" action="api" >
+        <button>API</button>
+    </form>
+
+
+</body>  
+</html>    

@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>
+  <style>
+    body {background-color: powderblue;text-align: center;}
+  </style>
+
+    <title>Files List</title>   
+</head> 
+<body>
+<table border="1" colspan="2" width="100%">
+    <tr>
+      <th width="60%">File</td>
+      <th width="40%">Download</td> 
+    </tr>
+  {% for file in total_files %}
+    <tr>
+      <td width="60%">{{file}}</td>
+      <td width="40%" align="center"><a href="/media/{{file}}" download="/media/{{file}}"  style="text-decoration:None">Download here<i class="fa fa-download"></i></a></td>
+    </tr>
+  {% endfor %}  
+ </table>
+
+</body>
+</html> 
